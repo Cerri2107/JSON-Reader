@@ -1,0 +1,5 @@
+.vscode
+inputdata
+*.ilk
+*.obj
+*.pdb
