@@ -2,7 +2,8 @@
 #include<fstream>
 #include<string>
 #include<json.hpp>
-#define inputdir "inputdata/"
+#define inputdir "inputfiles/"
+#define outputdir "outputfiles/"
 
 using json = nlohmann::json;
 
@@ -83,8 +84,8 @@ int main() {
     std::cin >> infilename;
     if (infilename.size() < 5 || infilename.substr(infilename.size() - 5, 5) != ".json")
         infilename = "input.json";
+    outfilename = outputdir + infilename + ".txt";
     infilename = inputdir + infilename;
-    outfilename = infilename + ".txt";
     
     //ensures file exists
     std::ofstream file(infilename, std::ios::app);
